@@ -105,32 +105,15 @@ $string['max_value_help'] = 'M&aacute;ximo valor permitido para la variable.';
 $string['vars_required'] = 'ATENCI&Oacute;N: Si desea utilizar variables personalizadas, debe espeficificar al menos una.';
 $string['vars_incorrect_type'] = 'ATENCI&Oacute;N: El tipo y los valores especificados para esta variable no se corresponden entre s&iacute;.';
 
-$string['programming_config'] = 'Configurar uso de Blockly y editor de c&oacute;digo ACE';
+$string['blockly_config'] = 'Configurar uso de Blockly';
 
-$string['use_blockly'] = 'Habilitar Blockly/ACE';
-$string['use_blockly_help'] = 'Cuando se usa esta opci&oacute;n, la actividad EJSApp mostrar&aacute; un espacio para programar en Blockly. Los programas creados en Blockly podr&aacute;n interactuar con el laboratorio virtual o remoto. Tambi&eacute;n puede usarse un editor de c&oacute;digo para sobrescribir funciones del laboratorio.';
-$string['charts_blockly'] = 'Habilitar gr&aacute;ficas';
-$string['events_blockly'] = 'Habilitar eventos';
-$string['functions'] = 'Habilitar reescribir funciones';
-$string['func_language'] = 'Lenguaje de programaci&oacute;n';
-$string['func_language_help'] = 'El lenguaje de programaci&oacute;n a usar para sobrescribir las funciones. Para cualquier elecc&oacute;n distinta de Blockly, aparece el editor de c&oacute;digo ACE.';
-$string['func_name'] = 'Funci&oacute;n para ser reescrita';
-$string['func_name_help'] = 'Nombre de la variable que almacena la funci&oacute;n que quieres permitir que sea sobrescrita.';
-$string['remote_function'] = 'La funci&oacute;n se ejecuta en el servidor';
-$string['blocklyfile'] = 'Programa blockly inicial';
+$string['use_blockly'] = 'Habilitar el uso de Blockly';
+$string['use_blockly_help'] = 'Cuando se usa esta opci&oacute;n, la actividad EJSApp mostrar&aacute; un espacio para programar en Blockly. Los programas creados en Blockly podr&aacute;n interactuar con el laboratorio virtual o remoto.';
+$string['charts_blockly'] = 'Mostrar bloques de gr&aacute;ficas';
+$string['events_blockly'] = 'Mostrar bloques de eventos';
+$string['controller_blockly'] = 'Mostrar bloques de controlador';
+$string['blocklyfile'] = 'Programa inicial';
 $string['blocklyfile_help'] = 'Puedes seleccionar un fichero .blk que especifique que programa blockly debe cargarse inicialmente.';
-$string['experiment_blockly'] = "Experimentos";
-$string['data_blockly'] = "Datos y Gráficas";
-$string['event_blockly'] = "Eventos";
-$string['functions'] = "Funciones";
-$string['experimentDropdown_blockly'] = " Nuevo código de experimento";
-$string['chartDropdown_blockly'] = " Nuevo código de gráfica";
-$string['eventDropdown_blockly'] = " Nuevo código de evento";
-$string['functionDropdown'] = " Reescribir función";
-$string['run_blockly'] = " Ejecutar";
-$string['log_blockly'] = " Registro";
-$string['error_blockly'] = " Errores:";
-$string['previousExecutions_blockly'] = " Ejecuciones previas:";
 
 $string['rem_lab_conf'] = 'Configuraci&oacute;n del laboratorio remoto';
 
@@ -157,12 +140,18 @@ $string['collab_access'] = 'Esta es una sesi&oacute;n colaborativa.';
 $string['check_bookings'] = 'Consulte sus reservas activas con el sistema de reservas.';
 $string['lab_in_use'] = 'El laboratorio est&aacute; ocupado o reiniciandose en este instante. Pruebe de nuevo m&aacute;s adelante.';
 $string['booked_lab'] = 'Este laboratorio ha sido reservado para esta hora en un curso distinto. Pruebe de nuevo m&aacute;s adelante.';
-$string['forbid_lti'] = 'No tienes permisos para acceder a este laboratorio.';
 
 $string['ejsapp_error'] = 'La actividad EJSApp a la que est&aacute; tratando de acceder no existe.';
 
 $string['personal_vars_button'] = 'Ver variables personalizadas';
-$string['rewrite_functions_button'] = 'Seleccionar funciones de laboratorio a sobreescribir';
+
+//DMF-I
+$string['time_left'] = 'Tiempo restante';
+$string['connected_users'] = 'Usuarios conectados';
+$string['no_connected_users'] = 'No hay usuarios conectados';
+$string['invited_users'] = 'Usuarios invitados';
+$string['no_invited_users'] = 'No hay usuarios invitados';
+//DMF-F
 
 // Strings in lib.php.
 $string['deletedlogs'] = 'Borrar todas las entradas del log';
@@ -170,9 +159,6 @@ $string['deletedlegacylogs'] = 'Borrar todas las entradas del log antiguo';
 $string['deletedrecords'] = 'Borrar todas acciones grabadas de usuario en actividades ejsapp';
 $string['deletedpersonalvars'] = 'Borrar todas las variables personalizadas';
 $string['deletedgrades'] = 'Borrar todas las calificaciones de actividades ejsapp';
-
-// Strings in personalized_vars_values.php.
-$string['rewriteFuncs_pageTitle'] = 'Habilitar la reescritura de funciones del laboratorio';
 
 // Strings in personalized_vars_values.php.
 $string['personalVars_pageTitle'] = 'Valores de las variables personalizadas';
@@ -237,7 +223,7 @@ $string['default_general_set'] = "Opciones generales";
 $string['check_activity'] = "Comprobar actividad";
 $string['check_activity_description'] = "Con que frecuencia se comprueba la actividad de los usuarios en EJSApp (s)";
 $string['server_id'] = "ID del sitio en ENLARGE IRS";
-$string['server_id_description'] = "ID usado para registrar este sitio Moodle en ENLARGE IRS (https://irs.nebsyst.com). Dejar en blanco si el sitio no ha sido registrado";
+$string['server_id_description'] = "ID usado para registrar este sitio Moodle en ENLARGE IRS (http://irs.nebsyst.com). Dejar en blanco si el sitio no ha sido registrado";
 $string['default_certificate_set'] = "Opciones del certificado de confianza. (Importante s&oacute;lo si se desea firmar de manera autom&aacute;tica los applets subidos con EJSApp)";
 $string['certificate_path'] = "Ruta al fichero del certificado de confianza";
 $string['certificate_path_description'] = "La ruta en el servidor Moodle al fichero del certificado de confianza que se usar&aacute; para firmar los applets de Java";

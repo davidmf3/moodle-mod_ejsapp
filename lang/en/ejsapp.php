@@ -105,32 +105,15 @@ $string['max_value_help'] = 'Maximum value allowed for the variable.';
 $string['vars_required'] = 'WARNING: If you want to use personalized variables, you must specify at least one.';
 $string['vars_incorrect_type'] = 'WARNING: The specified type and values for this variable does not correspond to each other.';
 
-$string['programming_config'] = 'Configure use of Blockly & ACE code editor';
+$string['blockly_config'] = 'Configure use of Blockly';
 
-$string['use_blockly'] = 'Enable Blockly/ACE';
-$string['use_blockly_help'] = 'When using this option, the EJSApp activity will display a space for programming in Blockly. The programs created with Blockly will be able to interact with the virtual or remote lab. A code editor can also be used to overwrite lab functions.';
-$string['charts_blockly'] = 'Enable charts';
-$string['events_blockly'] = 'Enable events';
-$string['functions'] = 'Enable overwriting functions';
-$string['func_language'] = 'Programming language';
-$string['func_language_help'] = 'The programming language to be used for overwriting functions. For any choice different to Blockly, the ACE code editor will appear.';
-$string['func_name'] = 'Function to be overwritten';
-$string['func_name_help'] = 'Name of the variable that stores the function you want to allow to be overwritten.';
-$string['remote_function'] = 'Function runs on the server';
-$string['blocklyfile'] = 'Initial blockly program';
+$string['use_blockly'] = 'Enable using Blockly';
+$string['use_blockly_help'] = 'When using this option, the EJSApp activity will display a space for programming in Blockly. The programs created with Blockly will be able to interact with the virtual or remote lab.';
+$string['charts_blockly'] = 'Mostrar bloques de gr&aacute;ficas';
+$string['events_blockly'] = 'Mostrar bloques de eventos';
+$string['controller_blockly'] = 'Mostrar bloques de controlador';
+$string['blocklyfile'] = 'Initial program';
 $string['blocklyfile_help'] = 'You can select a .blk file that specifies which blockly programs should be initially loaded.';
-$string['experiment_blockly'] = "Experiments";
-$string['data_blockly'] = "Data & Charts";
-$string['event_blockly'] = "Events";
-$string['functions'] = "Functions";
-$string['experimentDropdown_blockly'] = " New experiment script";
-$string['chartDropdown_blockly'] = " New chart script";
-$string['eventDropdown_blockly'] = " New event script";
-$string['functionDropdown'] = " Overwrite function";
-$string['run_blockly'] = " Run";
-$string['log_blockly'] = " Log";
-$string['error_blockly'] = " Errors:";
-$string['previousExecutions_blockly'] = " Previous executions:";
 
 $string['rem_lab_conf'] = 'Remote lab configuration';
 
@@ -157,12 +140,18 @@ $string['collab_access'] = 'This is a collaborative session.';
 $string['check_bookings'] = 'Check your active bookings with the booking system.';
 $string['lab_in_use'] = 'The lab is currently being used or rebooted. Try again later.';
 $string['booked_lab'] = 'This lab has been booked for this hour in a different course. Try again later.';
-$string['forbid_lti'] = 'You don\'t have the rights to access this lab.';
 
 $string['ejsapp_error'] = 'The EJSApp activity you are trying to access does not exist.';
 
 $string['personal_vars_button'] = 'View personalized variables';
-$string['rewrite_functions_button'] = 'Select lab functions to be overwritten';
+
+//DMF-I
+$string['time_left'] = 'Time left';
+$string['connected_users'] = 'Connected users';
+$string['no_connected_users'] = 'No connected users';
+$string['invited_users'] = 'Invited users';
+$string['no_invited_users'] = 'No invited users';
+//DMF-F
 
 // Strings in lib.php.
 $string['deletedlogs'] = 'Delete all log entries';
@@ -170,9 +159,6 @@ $string['deletedlegacylogs'] = 'Delete all legacy log entries';
 $string['deletedrecords'] = 'Delete all user actions recorded in ejsapp activities';
 $string['deletedpersonalvars'] = 'Delete all user personalized variables';
 $string['deletedgrades'] = 'Delete all grades of ejsapp activities';
-
-// Strings in personalized_vars_values.php.
-$string['rewriteFuncs_pageTitle'] = 'Enable overwriting lab functions';
 
 // Strings in personalized_vars_values.php.
 $string['personalVars_pageTitle'] = 'Values of the personalized variables';
@@ -235,7 +221,7 @@ $string['default_general_set'] = "General settings";
 $string['check_activity'] = "Check activity";
 $string['check_activity_description'] = "How often the users' activity in EJSApp is checked (s)";
 $string['server_id'] = "Site ID in ENLARGE IRS";
-$string['server_id_description'] = "ID used for registering this Moodle site in ENLARGE IRS (https://irs.nebsyst.com). Leave it blank if the site is not registered";
+$string['server_id_description'] = "ID used for registering this Moodle site in ENLARGE IRS (http://irs.nebsyst.com). Leave it blank if the site is not registered";
 $string['default_certificate_set'] = "Trust certificate settings. (Only important if you want to automatically sign the applets uploaded with EJSApp)";
 $string['certificate_path'] = "Trust certificate file path";
 $string['certificate_path_description'] = "The path in the Moodle server to the trust certificate file to be used for signing the Java applets";

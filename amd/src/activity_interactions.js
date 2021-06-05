@@ -105,7 +105,96 @@ define(['jquery', 'mod_ejsapp/screenfull'], function($, sf) {
             };
             updateRemainingTimeClient();
             var intervalClient = setInterval(updateRemainingTimeClient, 1000);
+        },
+//DMF-I
+        time_left: function(urlT, htmlidT) {
+            var divTime = $('#' + htmlidT);
+            var counter=0;
+            var time_left = new Date();
+            var time_left_client = new Date();
+            var icontinue=true;
+
+            if (counter == 0){
+                $.get(urlT, function(data) {
+                    var clock = data.toString();
+                    time_left.setHours(clock.substr(0,2));
+                    time_left.setMinutes( clock.substr(3,2));
+                    time_left.setSeconds(clock.substr(6,2));
+                    var hour = time_left.getHours();
+                    if (hour < 10){ hour = "0"+hour;}
+                    var min = time_left.getMinutes();
+                    if (min < 10){ min = "0"+min;}
+                    var sec = time_left.getSeconds();
+                    if (sec < 10){ sec = "0"+sec;}
+
+                    time_left_client = time_left;
+                    if (hour > 0 || min > 0 || sec> 0) {
+                        divTime.text(hour+":"+min+":"+sec);
+                    }
+
+
+                });
+                counter++;
+            }
+
+            var updateTimeLeftClient = function() {
+                var divTime = $('#' + htmlidT);
+                var hour = time_left.getHours();
+                if (hour < 10){ hour = "0"+hour;}
+                var min = time_left.getMinutes();
+                if (min < 10){ min = "0"+min;}
+                var sec = time_left.getSeconds();
+                if (sec < 10){ sec = "0"+sec;}
+                if (hour == 0 && min == 0 && sec == 0) {
+                    divTime.text("00:00:00");
+                    icontinue=false;
+                }
+
+                if (icontinue){
+                    var second = 1000;
+                    time_left_client.setTime(time_left_client.getTime() - second);
+                    var hour = time_left_client.getHours();
+                    if (hour < 10){ hour = "0"+hour;}
+                    var min = time_left_client.getMinutes();
+                    if (min < 10){ min = "0"+min;}
+                    var sec = time_left_client.getSeconds();
+                    if (sec < 10){ sec = "0"+sec;}
+
+                    if (hour > 0 || min > 0 || sec> 0) {
+                        divTime.text(hour + ":" + min + ":" + sec);
+                    }else{
+                        icontinue=false;
+                        divTime.text("00:00:00");
+                    }
+                }
+            };
+            updateTimeLeftClient();
+            var intervalClientTime = setInterval(updateTimeLeftClient, 1000);
+        },
+        connected_users: function(urlT, htmlidT) {
+            var divUsersCon = document.getElementById(htmlidT);
+
+            var updateConnectedUsersClient = function() {
+                $.get(urlT, function(data){
+                    divUsersCon.innerHTML=data.toString();
+                });
+            };
+
+            updateConnectedUsersClient();
+            var intervalClientTime = setInterval(updateConnectedUsersClient, 5000);
+        },
+        invited_users: function(urlT, htmlidT) {
+            var divUsersCon = document.getElementById(htmlidT);
+
+            var updateInvitedUsersClient = function() {
+                $.get(urlT, function(data){
+                    divUsersCon.innerHTML=data.toString();
+                });
+            };
+
+            updateInvitedUsersClient();
         }
+//DMF-F
     };
     return t;
 });
